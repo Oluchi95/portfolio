@@ -19,7 +19,7 @@ This is my personal portfolio website built with HTML and CSS, featuring my back
 - PHP 
 
 ## Live Site
-[Your Live Link Here]
+
 
 ## License
 MIT
