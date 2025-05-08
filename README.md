@@ -1,2 +1,25 @@
-# portfolio
-A personal portfolio website showcasing my projects, skills, certifications, and work experience as a web developer and IT professional
+# Oluchukwu Ikeri - Portfolio Website
+This is my personal portfolio website built with HTML and CSS, featuring my background, technical skills, projects, work experience, and more.
+
+## Features
+- Responsive layout
+- Clean and accessible HTML/CSS
+- Organized sections (About, Projects, Skills, Contact, etc.)
+- Live project demos and GitHub repo links
+
+## Tech Stack
+- HTML5
+- CSS3
+- JavaScript
+- React
+- Java
+- Python
+- WordPress
+- Bootstrap
+- PHP 
+
+## Live Site
+[Your Live Link Here]
+
+## License
+MIT
