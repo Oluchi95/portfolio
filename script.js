@@ -1,32 +1,34 @@
 // Theme Toggle Functionality
 const themeToggleBtn = document.getElementById('theme-toggle-btn');
-const themeIconMoon = themeToggleBtn.querySelector('.fa-moon');
-const themeIconSun = themeToggleBtn.querySelector('.fa-sun');
+const themeIconMoon = themeToggleBtn?.querySelector('.fa-moon');
+const themeIconSun = themeToggleBtn?.querySelector('.fa-sun');
 
 // Check for saved theme preference or use preferred color scheme
 const currentTheme = localStorage.getItem('theme') || 
-                    (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 document.documentElement.setAttribute('data-theme', currentTheme);
 
-if (currentTheme === 'light') {
-    themeIconMoon.style.display = 'none';
-    themeIconSun.style.display = 'inline-block';
+if (currentTheme === 'light' && themeIconMoon && themeIconSun) {
+  themeIconMoon.style.display = 'none';
+  themeIconSun.style.display = 'inline-block';
 }
 
-themeToggleBtn.addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    
+themeToggleBtn?.addEventListener('click', () => {
+  const currentTheme = document.documentElement.getAttribute('data-theme');
+  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  
+  document.documentElement.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+  
+  if (themeIconMoon && themeIconSun) {
     if (newTheme === 'light') {
-        themeIconMoon.style.display = 'none';
-        themeIconSun.style.display = 'inline-block';
+      themeIconMoon.style.display = 'none';
+      themeIconSun.style.display = 'inline-block';
     } else {
-        themeIconMoon.style.display = 'inline-block';
-        themeIconSun.style.display = 'none';
+      themeIconMoon.style.display = 'inline-block';
+      themeIconSun.style.display = 'none';
     }
+  }
 });
 
 // Contact form submission with success/error messages
@@ -68,7 +70,7 @@ if (contactForm) {
             setTimeout(() => {
               successMessage.remove();
             }, 5000);
-          }else {
+          } else {
             throw new Error('Form submission failed');
           }
         } catch (error) {
@@ -92,35 +94,25 @@ if (contactForm) {
     });
 }
 
-// Smooth scrolling for navigation links
+// Enhanced Smooth Scrolling (replaces the duplicate simple version)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
-  });
-});
-
-// Enhanced Smooth Scrolling
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-  e.preventDefault();
-  
-  const targetId = this.getAttribute('href');
-  const targetElement = document.querySelector(targetId);
-  
-  if (targetElement) {
-    const headerHeight = document.querySelector('header').offsetHeight;
-    const targetPosition = targetElement.offsetTop - headerHeight;
     
-    window.scrollTo({
-      top: targetPosition,
-      behavior: 'smooth'
-    });
+    const targetId = this.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
     
-    // Update URL without jumping
-    history.pushState(null, null, targetId);
+    if (targetElement) {
+      const headerHeight = document.querySelector('header')?.offsetHeight || 0;
+      const targetPosition = targetElement.offsetTop - headerHeight;
+      
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+      
+      // Update URL without jumping
+      history.pushState(null, null, targetId);
     }
   });
 });
@@ -166,11 +158,50 @@ window.addEventListener('DOMContentLoaded', animateSkillBars);
 // Updates copyright year automatically
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// Back to top button visibility
 window.addEventListener("scroll", function () {
   const btn = document.getElementById("back-to-top");
-  if (window.scrollY > 200) {
-    btn.style.display = "block";
-  } else {
-    btn.style.display = "none";
+  if (btn) {
+    btn.style.display = window.scrollY > 200 ? "block" : "none";
   }
+});
+
+// Mobile Menu Toggle
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const navLinks = document.querySelector('.nav-links');
+
+mobileMenuBtn?.addEventListener('click', () => {
+  const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+  mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+  navLinks.classList.toggle('active');
+  document.body.classList.toggle('no-scroll');
+});
+
+// Close menu when clicking on a link
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks?.classList.remove('active');
+    mobileMenuBtn?.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('no-scroll');
+  });
+});
+
+// Preload all images after initial load
+window.addEventListener('load', function() {
+  const images = [
+    'assets/images/oluchukwu.jpg',
+    'assets/images/weather-app.PNG',
+    'assets/images/calculator.PNG',
+    'assets/images/bemore.PNG',
+    'assets/images/vector.PNG',
+    'assets/images/dorry.PNG',
+    'assets/images/empowa.PNG',
+    'assets/images/kura.PNG',
+    'assets/images/logo.png',
+    'assets/images/favicon.ico.png',
+  ];
+  
+  images.forEach(img => {
+    new Image().src = img;
+  });
 });

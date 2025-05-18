@@ -7,6 +7,15 @@
         <meta name="keywords" content="Frontend Developer, React Developer, Web Developer, JavaScript, Portfolio">
         <meta property="og:image" content="assets/images/oluchukwu.jpg">
         <link rel="preload" href="assets/images/oluchukwu.jpg" as="image">
+        <link rel="preload" href="assets/images/logo.png" as="image">
+        <link rel="preload" href="assets/images/weather-app.PNG" as="image">
+        <link rel="preload" href="assets/images/calculator.PNG" as="image">
+        <link rel="preload" href="assets/images/bemore.PNG" as="image">
+        <link rel="preload" href="assets/images/kura.PNG" as="image">
+        <link rel="preload" href="assets/images/dorry.PNG" as="image">
+        <link rel="preload" href="assets/images/vector.PNG" as="image">
+        <link rel="preload" href="assets/images/empowa.PNG" as="image">
+        <link rel="preload" href="assets/images/favicon.ico.png" as="image">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="icon" href="assets/images/favicon.ico.png" type="image/x-icon">
         <title>Oluchukwu Priscilla Ikeri | Frontend Developer</title>
@@ -21,7 +30,19 @@
         <header id="header">
             <div class="container">
                 <nav>
-                    <a href="index.html" class="logo">Oluchukwu</a>
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/logo.png" alt="Priscilla Oluchukwu Ikeri Logo" loading="lazy">
+                    </a>
+                    <!-- Mobile Hamburger Button -->
+                    <button class="mobile-menu-btn" aria-label="Menu" aria-expanded="false">
+                        <span class="menu-icon">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </span>
+                    </button>
+                    
+                    <!-- Desktop Navigation Links -->
                     <div class="nav-links">
                         <a href="#about">About</a>
                         <a href="#skills">Skills</a>
@@ -69,7 +90,9 @@
                             <img src="assets/images/oluchukwu.jpg" 
                                 alt="Oluchukwu Ikeri Profile Photo" 
                                 class="profile-image"
-                                loading="lazy">
+                                loading="eager"
+                                data-loaded="false"
+                                onload="this.setAttribute('data-loaded', 'true')">
                             <div class="image-border"></div>
                         </div>
                     </div>
