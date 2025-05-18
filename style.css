@@ -747,9 +747,11 @@ footer {
   .location-chip {
     margin: 2rem auto 0;
   }
+
   .btn-primary {
     margin-bottom: 1rem;
   }
+  
   .btn-outline {
     margin-bottom: 1rem;
   }
@@ -809,6 +811,14 @@ footer {
   .logo {
     margin-right: 1rem;
   }
+
+  .btn-primary {
+    margin-bottom: 1rem;
+  }
+
+  .btn-outline {
+    margin-bottom: 1rem;
+  }
 }
 
 @media (max-width: 576px) {
@@ -829,5 +839,13 @@ footer {
   .profile-image-container {
     width: 250px;
     height: 250px;
+  }
+
+  .btn-primary {
+    margin-bottom: 1rem;
+  }
+
+  .btn-outline {
+    margin-bottom: 1rem;
   }
 }
