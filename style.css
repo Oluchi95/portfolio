@@ -750,6 +750,9 @@ footer {
   .btn-primary {
     margin-bottom: 1rem;
   }
+  .btn-outline {
+    margin-bottom: 1rem;
+  }
 }
 
 @media (max-width: 768px) {
