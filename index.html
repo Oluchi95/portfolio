@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Oluchukwu Ikeri - Frontend Developer specializing in React, JavaScript, and responsive web design. View my portfolio and projects.">
+        <meta name="keywords" content="Frontend Developer, React Developer, Web Developer, JavaScript, Portfolio">
+        <meta property="og:image" content="assets/images/oluchukwu.jpg">
+        <link rel="preload" href="assets/images/oluchukwu.jpg" as="image">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+        <title>Oluchukwu Priscilla Ikeri | Frontend Developer</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="style.css"> 
+    </head>
+    <body>
+        <div class="page-loader">
+            <div class="loader-spinner"></div>
+        </div>
+        <!-- Header -->
+        <header id="header">
+            <div class="container">
+                <nav>
+                    <a href="index.html" class="logo">Oluchukwu</a>
+                    <div class="nav-links">
+                        <a href="#about">About</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#experience">Experience</a>
+                        <a href="#certifications">Certifications</a>
+                        <a href="#memberships">Memberships</a>
+                        <a href="#languages">Languages</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    <div class="theme-toggle">
+                        <button id="theme-toggle-btn" aria-label="Toggle theme">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun" style="display: none;"></i>
+                        </button>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Hi, I'm <span class="hero-highlight">Priscilla Oluchukwu Ikeri</span></h1>
+                        <p class="hero-subtitle">Frontend Developer passionate about building functional web solutions.</p>
+                        <p>Currently strengthening my expertise in React.js and exploring Web3 technologies.</p>
+                        <div class="hero-cta">
+                            <a href="#projects" class="btn btn-primary">View My Work</a>
+                            <a href="#contact" class="btn btn-outline">Contact Me</a>
+                        </div>
+                        
+                        <!-- Location Chip -->
+                        <div class="location-chip">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Lagos, Nigeria</span>
+                            <span class="remote-badge">Available Remotely</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Profile Photo -->
+                    <div class="hero-profile">
+                        <div class="profile-image-container">
+                            <img src="assets/images/oluchukwu.jpg" 
+                                alt="Oluchukwu Ikeri Profile Photo" 
+                                class="profile-image"
+                                loading="lazy">
+                            <div class="image-border"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>Enthusiastic and adaptable web developer with foundational knowledge in JavaScript, React.js, and PHP for backend development. Experienced in managing WordPress websites and digital content.</p>
+                <p>Currently pursuing my MSc in Information Technology at the University of Lagos while expanding my technical skills in Java and Python.</p>
+                <p>Passionate about building functional web solutions, improving user engagement, and continuously expanding my technical skills in a collaborative environment.</p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <div class="container">
+                <h2>Technical Skills</h2>
+                <div class="skills-container">
+                    <div class="skill-item">
+                        <i class="fab fa-js"></i>
+                        <h3>JavaScript</h3>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-react"></i>
+                        <h3>React</h3>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-node-js"></i>
+                        <h3>Node.js</h3>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-html5"></i>
+                        <h3>HTML5</h3>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-css3-alt"></i>
+                        <h3>CSS3</h3>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-php"></i>
+                        <h3>PHP</h3>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-python"></i>
+                        <h3>Python</h3>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-java"></i>
+                        <h3>Java</h3>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-database"></i>
+                        <h3>SQL</h3>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-git-alt"></i>
+                        <h3>Git</h3>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-wordpress"></i>
+                        <h3>WordPress</h3>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Responsive Design</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <div class="container">
+                <h2>My Projects</h2>
+                <div class="projects-grid">
+                    <!-- Weather App -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/images/weather-app.PNG" alt="Weather App">
+                        </div>
+                        <div class="project-info">
+                            <h3>Weather App</h3>
+                            <p>Developed a weather application that fetches real-time weather data based on user input.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/Oluchi95/weather-app-react" class="btn btn-primary">Code</a>
+                                <a href="https://weather-app-react-ei8g.onrender.com" class="btn btn-outline">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Functional Calculator -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/images/calculator.PNG" alt="Calculator">
+                        </div>
+                        <div class="project-info">
+                            <h3>Functional Calculator</h3>
+                            <p>Developed a fully functional calculator that also displays the current date and time dynamically.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/Oluchi95/calculator" class="btn btn-primary">Code</a>
+                                <a href="https://calculator-s3u9.onrender.com" class="btn btn-outline">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BEMORE Landing Page -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/images/bemore.PNG" alt="BEMORE">
+                        </div>
+                        <div class="project-info">
+                            <h3>BEMORE Landing Page</h3>
+                            <p>Created a landing page for Bemore Girls Foundation focusing on positioning and styling.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/Oluchi95/BEMORE" class="btn btn-primary">Code</a>
+                                <a href="https://bemore.onrender.com/" class="btn btn-outline">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Animated Single-Page Website -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/images/kura.PNG" alt="Kura Screenshot">
+                        </div>
+                        <div class="project-info">
+                            <h3>Animated Single-Page Website</h3>
+                            <p>Integrated media queries, Font Awesome, and animations.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/Oluchi95/Kura" class="btn btn-primary">Code</a>
+                                <a href="https://kura-ywr0.onrender.com" class="btn btn-outline">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dorry Digital Agency Website -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/images/dorry.PNG" alt="Dorry Screenshot">
+                        </div>
+                        <div class="project-info">
+                            <h3>Dorry Digital Agency Website</h3>
+                            <p>Responsive, structured site with optimized layout.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/Oluchi95/My-Projects" class="btn btn-primary">Code</a>
+                                <a href="https://my-projects-yx7i.onrender.com" class="btn btn-outline">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vector Stock Platform -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/images/vector.PNG" alt="Vector Screenshot">
+                        </div>
+                        <div class="project-info">
+                            <h3>Vector Stock Platform</h3>
+                            <p>A sleek landing page with dropdown menus and animations.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/Oluchi95/Vector" class="btn btn-primary">Code</a>
+                                <a href="https://vector-xor8.onrender.com" class="btn btn-outline">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Empowa Website -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/images/empowa.PNG" alt="Empowa Screenshot">
+                        </div>
+                        <div class="project-info">
+                            <h3>Empowa Website</h3>
+                            <p>Responsive non-profit site with carousel, Bootstrap, and interactivity.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/Oluchi95/Empowa" class="btn btn-primary">Code</a>
+                                <a href="https://empowa.onrender.com" class="btn btn-outline">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <div class="container">
+                <h2>Professional Experience</h2>
+                <div class="timeline">
+                    <!-- Chesed Group -->
+                    <div class="timeline-item left">
+                        <div class="timeline-content">
+                            <h3>HR Manager / Head of Operations</h3>
+                            <p>Chesed Group of Companies</p>
+                            <p><small>07/2024 - 03/2025</small></p>
+                            <ul>
+                                <li>Oversaw daily operations and ensured efficient workflow</li>
+                                <li>Managed human resources functions including recruitment</li>
+                                <li>Developed and implemented company policies</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- BAAF -->
+                    <div class="timeline-item right">
+                        <div class="timeline-content">
+                            <h3>IT Officer</h3>
+                            <p>Betty Anyanwu-Akeredolu Foundation (BAAF)</p>
+                            <p><small>01/2024 - 12/2024</small></p>
+                            <ul>
+                                <li>Managed and updated the foundation's website and social media</li>
+                                <li>Designed and implemented Google Forms for data collection</li>
+                                <li>Automated workflows for email management</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Chesed Group EA -->
+                    <div class="timeline-item left">
+                        <div class="timeline-content">
+                            <h3>Executive Assistant to the CEO</h3>
+                            <p>Chesed Group of Companies</p>
+                            <p><small>07/2020 - 10/2020</small></p>
+                            <ul>
+                                <li>Managed company's social media pages</li>
+                                <li>Created graphics and digital content using Canva</li>
+                                <li>Supported serviced apartment operations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications">
+            <div class="container">
+                <h2 class="text-center">Certifications</h2>
+                <div class="certifications-grid">
+                    <div class="certification-card">
+                        <i class="fas fa-certificate"></i>
+                        <h3>Web Development Training</h3>
+                        <p>SheCodes (2024)</p>
+                    </div>
+                    <div class="certification-card">
+                        <i class="fas fa-certificate"></i>
+                        <h3>Full Stack Web Development</h3>
+                        <p>Wetin Dey Code Academy (2023)</p>
+                    </div>
+                    <div class="certification-card">
+                        <i class="fas fa-certificate"></i>
+                        <h3>Soft-Skills Training</h3>
+                        <p>Jobberman (2022)</p>
+                    </div>
+                    <div class="certification-card">
+                        <i class="fas fa-certificate"></i>
+                        <h3>Preparing to Manage HR</h3>
+                        <p>University of Minnesota (Coursera, 2020)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Memberships Section -->
+        <section id="memberships">
+            <div class="container">
+                <h2 class="text-center">Professional Memberships</h2>
+                <div class="memberships-grid">
+                    <div class="membership-card">
+                        <i class="fas fa-users"></i>
+                        <h3>DEV Community</h3>
+                        <p>Global network of software developers</p>
+                    </div>
+                    <div class="membership-card">
+                        <i class="fas fa-female"></i>
+                        <h3>Web3Ladies</h3>
+                        <p>Community for women in Web3</p>
+                    </div>
+                    <div class="membership-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>IIPSM</h3>
+                        <p>International Institute of Project and Safety Management</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Languages Section -->
+        <section id="languages">
+            <div class="container">
+                <h2 class="text-center">Spoken Languages</h2>
+                <div class="languages-container">
+                    <div class="language-item">
+                        <span class="language-name">English</span>
+                        <div class="language-bar">
+                            <div class="language-progress" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="language-item">
+                        <span class="language-name">Igbo</span>
+                        <div class="language-bar">
+                            <div class="language-progress" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="language-item">
+                        <span class="language-name">Yoruba</span>
+                        <div class="language-bar">
+                            <div class="language-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <h2 class="text-center">Get In Touch</h2>  
+                <form class="contact-form" action="https://formspree.io/f/mgvkdjka" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="_replyto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>    
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>         
+            <div class="footer-bottom">
+                <div class="social-links">
+                    <a href="https://github.com/Oluchi95" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/ikeri" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:ikeripriscilla94@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+                <p class="copyright">© <span id="year"></span> Oluchukwu Priscilla Ikeri. All rights reserved.</p>
+            </div>
+            </div>
+        </footer>
+        <a href="#hero" id="back-to-top">⬆ Back to Top</a>
+
+        <script src="script.js"></script>
+    </body>
+</html>
