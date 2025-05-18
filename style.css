@@ -199,10 +199,6 @@ nav {
   max-width: 800px;
 }
 
-.hero-title {
-  margin-bottom: 1.5rem;
-}
-
 .hero-highlight {
   color: var(--primary-light);
 }
@@ -408,6 +404,7 @@ nav {
   position: relative;
   max-width: 800px;
   margin: 2rem auto;
+  padding: 0 1rem;
 }
 
 .timeline::after {
@@ -417,15 +414,16 @@ nav {
   background-color: var(--primary-light);
   top: 0;
   bottom: 0;
-  left: 50%;
+  left: 1.5rem;
   margin-left: -1px;
 }
 
 .timeline-item {
-  padding: 10px 40px;
+  padding: 10px 0 10px 40px;
   position: relative;
-  width: 50%;
+  width: 100%;
   box-sizing: border-box;
+  margin-bottom: 2rem;
 }
 
 .timeline-item::after {
@@ -439,7 +437,7 @@ nav {
   z-index: 1;
 }
 
-.left {
+/* .left {
   left: 0;
 }
 
@@ -453,12 +451,93 @@ nav {
 
 .right::after {
   left: -10px;
-}
+} */
 
 .timeline-content {
   padding: 1.5rem;
   background-color: var(--dark-gray);
   border-radius: 0.5rem;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Desktop Styles */
+@media (max-width: 768px) {
+  .timeline-item {
+    padding: 10px 40px;
+    width: 50%;
+  }
+  
+  .timeline::after {
+    left: 50%;
+  }
+  
+  .timeline-item::after {
+    left: auto;
+    top: 15px;
+  }
+  
+  .left {
+    left: 0;
+  }
+  .right {
+    left: 50%;
+  }
+  .left::after {
+    right: -10px;
+  }
+  .right::after {
+    left: -10px;
+  }
+}
+
+/* Mobile Enhancements */
+@media (max-width: 767px) {
+  .timeline-content {
+    padding: 1rem;
+  }
+  
+  .timeline-content h3 {
+    font-size: 1.1rem;
+  }
+  
+  .timeline-content p {
+    font-size: 0.9rem;
+    margin: 0.3rem 0;
+  }
+  
+  .timeline-content ul {
+    padding-left: 1rem;
+  }
+  
+  .timeline-content li {
+    font-size: 0.85rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .timeline-item:nth-child(odd) .timeline-content {
+    margin-left: 10px;
+  }
+  .timeline-item:nth-child(even) .timeline-content {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .timeline-content {
+    padding: 0.8rem;
+  }
+  
+  .timeline-item::after {
+    width: 16px;
+    height: 16px;
+    top: 12px;
+  }
 }
 
 /* ====== Certifications ====== */
