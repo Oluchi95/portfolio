@@ -519,7 +519,7 @@ nav {
     font-size: 0.85rem;
     margin-bottom: 0.3rem;
   }
-  
+
   .timeline-item:nth-child(odd) .timeline-content {
     margin-left: 10px;
   }
@@ -746,6 +746,9 @@ footer {
   
   .location-chip {
     margin: 2rem auto 0;
+  }
+  .btn-primary {
+    margin-bottom: 1rem;
   }
 }
 
