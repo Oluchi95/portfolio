@@ -752,6 +752,10 @@ footer {
   .btn-outline {
     margin-bottom: 1rem;
   }
+
+  #hero {
+    margin-top: 10px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -816,7 +820,12 @@ footer {
   .btn-outline {
     margin-bottom: 1rem;
   }
+
+  #hero {
+    margin-top: 10px;
+  }
 }
+
 
 @media (max-width: 576px) {
   .hero-cta {
@@ -844,5 +853,9 @@ footer {
 
   .btn-outline {
     margin-bottom: 1rem;
+  }
+
+  #hero {
+    margin-top: 10px;
   }
 }
