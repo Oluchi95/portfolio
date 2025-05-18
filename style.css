@@ -520,12 +520,12 @@ nav {
     margin-bottom: 0.3rem;
   }
 
-  .timeline-item:nth-child(odd) .timeline-content {
+  /* .timeline-item:nth-child(odd) .timeline-content {
     margin-left: 10px;
   }
   .timeline-item:nth-child(even) .timeline-content {
     margin-left: 20px;
-  }
+  } */
 }
 
 @media (max-width: 400px) {
