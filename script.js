@@ -205,14 +205,3 @@ window.addEventListener('load', function() {
     new Image().src = img;
   });
 });
-
-// Make experience items collapsible on mobile
-document.querySelectorAll('.experience-header').forEach(header => {
-  header.addEventListener('click', () => {
-    if (window.innerWidth <= 768) {
-      const item = header.parentElement;
-      const description = item.querySelector('.experience-description');
-      description.style.display = description.style.display === 'none' ? 'block' : 'none';
-    }
-  });
-});

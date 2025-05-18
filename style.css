@@ -404,7 +404,6 @@ nav {
   position: relative;
   max-width: 800px;
   margin: 2rem auto;
-  padding: 0 1rem;
 }
 
 .timeline::after {
@@ -414,16 +413,15 @@ nav {
   background-color: var(--primary-light);
   top: 0;
   bottom: 0;
-  left: 1.5rem;
+  left: 50%;
   margin-left: -1px;
 }
 
 .timeline-item {
-  padding: 10px 0 10px 40px;
+  padding: 10px 40px;
   position: relative;
-  width: 100%;
+  width: 50%;
   box-sizing: border-box;
-  margin-bottom: 2rem;
 }
 
 .timeline-item::after {
@@ -437,7 +435,7 @@ nav {
   z-index: 1;
 }
 
-/* .left {
+.left {
   left: 0;
 }
 
@@ -451,13 +449,12 @@ nav {
 
 .right::after {
   left: -10px;
-} */
+}
 
 .timeline-content {
   padding: 1.5rem;
   background-color: var(--dark-gray);
   border-radius: 0.5rem;
-  position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -751,7 +748,7 @@ footer {
   .btn-primary {
     margin-bottom: 1rem;
   }
-  
+
   .btn-outline {
     margin-bottom: 1rem;
   }
