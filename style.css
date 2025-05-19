@@ -958,9 +958,9 @@ footer {
     height: auto;
   }
 
-  /* .project-image {
+  .project-image {
     height: 150px;
-  } */
+  }
 
   .btn {
     padding: 0.5rem 1rem;
@@ -1020,6 +1020,14 @@ footer {
   section {
     padding: 3rem 0;
   }
+
+  .certifications-grid, .memberships-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certification-card, .membership-card {
+    padding: 1.5rem;
+  }
 }
 
 @media (max-width: 425px) {
@@ -1049,13 +1057,5 @@ footer {
   .timeline-content li {
     font-size: 0.8rem;
     margin-bottom: 0.3rem;
-  }
-
-  .certifications-grid, .memberships-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .certification-card, .membership-card {
-    padding: 1.5rem;
   }
 }
