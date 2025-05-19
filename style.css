@@ -45,6 +45,7 @@ p { color: var(--gray); margin-bottom: 1rem; }
 
 section {
   padding: 5rem 0;
+  scroll-margin-top: 80px;
 }
 
 /* ====== Header & Navigation ====== */
@@ -52,6 +53,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
+  height: 80px;
   padding: 1rem 0;
   z-index: 100;
   transition: all 0.3s ease;
@@ -180,7 +182,9 @@ nav {
 
 /* ====== Hero Section ====== */
 #hero {
-  height: 100vh;
+  padding-top: 80px;
+  min-height: calc(100vh - 80px);
+  height: auto;
   display: flex;
   align-items: center;
   background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
@@ -422,6 +426,7 @@ nav {
   position: relative;
   width: 50%;
   box-sizing: border-box;
+  transition: transform 0.3s ease;
 }
 
 .timeline-item::after {
@@ -461,80 +466,6 @@ nav {
 .timeline-content:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-/* Desktop Styles */
-@media (max-width: 768px) {
-  .timeline-item {
-    padding: 10px 40px;
-    width: 50%;
-  }
-  
-  .timeline::after {
-    left: 50%;
-  }
-  
-  .timeline-item::after {
-    left: auto;
-    top: 15px;
-  }
-  
-  .left {
-    left: 0;
-  }
-  .right {
-    left: 50%;
-  }
-  .left::after {
-    right: -10px;
-  }
-  .right::after {
-    left: -10px;
-  }
-}
-
-/* Mobile Enhancements */
-@media (max-width: 767px) {
-  .timeline-content {
-    padding: 1rem;
-  }
-  
-  .timeline-content h3 {
-    font-size: 1.1rem;
-  }
-  
-  .timeline-content p {
-    font-size: 0.9rem;
-    margin: 0.3rem 0;
-  }
-  
-  .timeline-content ul {
-    padding-left: 1rem;
-  }
-  
-  .timeline-content li {
-    font-size: 0.85rem;
-    margin-bottom: 0.3rem;
-  }
-
-  /* .timeline-item:nth-child(odd) .timeline-content {
-    margin-left: 10px;
-  }
-  .timeline-item:nth-child(even) .timeline-content {
-    margin-left: 20px;
-  } */
-}
-
-@media (max-width: 400px) {
-  .timeline-content {
-    padding: 0.8rem;
-  }
-  
-  .timeline-item::after {
-    width: 16px;
-    height: 16px;
-    top: 12px;
-  }
 }
 
 /* ====== Certifications ====== */
@@ -721,7 +652,7 @@ footer {
   }
 }
 
-/* ====== Responsive Design ====== */
+/* ====== Responsiveness ====== */
 @media (max-width: 992px) {
   section {
     padding: 4rem 0;
@@ -756,6 +687,11 @@ footer {
   #hero {
     margin-top: 10px;
   }
+
+  header {
+    margin-bottom: 10px;
+  }
+
 }
 
 @media (max-width: 768px) {
@@ -822,7 +758,68 @@ footer {
   }
 
   #hero {
-    margin-top: 10px;
+    padding-top: 70px;
+    min-height: calc(100vh - 70px);
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .hero-profile {
+    order: -1;
+    margin-bottom: 2rem;
+  }
+
+  .profile-image-container {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+  }
+
+  .timeline::after {
+    left: 31px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-right: 25px;
+    padding-left: 70px;
+  }
+
+  .timeline-item.left,.timeline-item.right {
+    left: 0;
+  }
+
+  .timeline-item::after {
+    left: 21px;
+  }
+
+    .timeline-item.left::after,.timeline-item.right::after {
+    left: 21px;
+  }
+
+  .timeline-content {
+    padding: 1rem;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .timeline-content p,
+  .timeline-content small {
+    font-size: 0.9rem;
+  }
+
+  .timeline-content ul {
+    padding-left: 1rem;
+  }
+
+  .timeline-content li {
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -843,8 +840,13 @@ footer {
   }
   
   .profile-image-container {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .image-border {
+    top: 10px;
+    left: 10px;
   }
 
   .btn-primary {
@@ -854,8 +856,46 @@ footer {
   .btn-outline {
     margin-bottom: 1rem;
   }
+}
 
-  #hero {
-    margin-top: 10px;
+@media (max-width: 480px) {
+  .timeline-item {
+    padding-left: 60px;
+  }
+  
+  .timeline-item::after {
+    width: 16px;
+    height: 16px;
+    top: 18px;
+  }
+}
+
+@media (max-width: 425px) {
+  .timeline-item {
+    padding-left: 50px;
+  }
+  
+  .timeline-item::after {
+    width: 14px;
+    height: 14px;
+    top: 18px;
+  }
+  
+  .timeline-content h3 {
+    font-size: 1.2rem;
+  }
+  
+  .timeline-content p {
+    font-size: 0.85rem;
+    margin: 0.3rem 0;
+  }
+  
+  .timeline-content ul {
+    padding-left: 1rem;
+  }
+  
+  .timeline-content li {
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
   }
 }
