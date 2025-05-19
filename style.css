@@ -895,14 +895,130 @@ footer {
 }
 
 @media (max-width: 480px) {
-  .timeline-item {
-    padding-left: 60px;
+  h1 {
+    font-size: 2rem;
   }
   
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  p, li {
+    font-size: 0.7rem;
+  }
+  
+  .tech-item {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .nav-links {
+    width: 85%;
+    padding: 1rem;
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+  }
+
+  .mobile-menu-btn {
+    padding: 5px;
+  }
+  
+   /* Adjust container padding for very small screens */
+  .container {
+    padding: 0 1rem;
+  }
+
+  /* Make project cards full width on small screens */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    margin-bottom: 1.5rem;
+  }
+
+  .project-info {
+    padding: 1rem;
+  }
+
+  .project-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .project-image img, .profile-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .project-image {
+    height: 150px;
+  }
+
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  /* Adjust hero section for small screens */
+  #hero {
+    height: auto;
+    padding: 6rem 0 2rem;
+  }
+
+  .hero-grid {
+    gap: 1.5rem;
+  }
+
+  .profile-image-container {
+    width: 220px;
+    height: 220px;
+  }
+
+  /* Stack buttons vertically */
+  .hero-cta {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* Adjust tech stack display */
+  .tech-stack {
+    justify-content: center;
+  }
+
+  /* Timeline adjustments */
+  .timeline::after {
+    left: 31px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
   .timeline-item::after {
-    width: 16px;
-    height: 16px;
-    top: 18px;
+    left: 21px;
+  }
+
+  .left::after, .right::after {
+    left: 21px;
+  }
+
+  .right {
+    left: 0;
+  }
+
+  /* Reduce section padding */
+  section {
+    padding: 3rem 0;
   }
 }
 
@@ -933,5 +1049,13 @@ footer {
   .timeline-content li {
     font-size: 0.8rem;
     margin-bottom: 0.3rem;
+  }
+
+  .certifications-grid, .memberships-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certification-card, .membership-card {
+    padding: 1.5rem;
   }
 }
