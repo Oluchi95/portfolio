@@ -390,6 +390,29 @@ nav {
   opacity: 1;
 }
 
+/* Tech Stack Styles */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.tech-item {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: rgba(79, 70, 229, 0.1);
+  padding: 0.3rem 0.6rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+}
+
+.tech-item i {
+  font-size: 0.9rem;
+  color: var(--primary-light);
+}
+
 /* ====== Skills Section ====== */
 .skills-container {
   display: grid;
