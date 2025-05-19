@@ -162,9 +162,17 @@ nav {
   --dark: #f8fafc;
   --light: #0f172a;
   --gray: #64748b;
-  --dark-gray: #e2e8f0;
+  --dark-gray: #ffffff;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
+[data-theme="light"] .hero-title {
+  color: var(--dark);
+}
+[data-theme="light"] .location-chip {
+  color: var(--dark);
+  background: rgba(79, 70, 229, 0.1);
+}
 [data-theme="light"] .project-card,
 [data-theme="light"] .skill-item,
 [data-theme="light"] .certification-card,
@@ -201,6 +209,10 @@ nav {
 
 .hero-content {
   max-width: 800px;
+}
+
+.hero-title {
+  color: var(--light);
 }
 
 .hero-highlight {
@@ -254,12 +266,13 @@ nav {
 .location-chip {
   display: inline-flex;
   align-items: center;
-  background: rgba(79, 70, 229, 0.1);
+  background: rgba(79, 70, 229, 0.2);
   padding: 0.5rem 1rem;
   border-radius: 50px;
   margin-top: 2rem;
   gap: 0.5rem;
   font-size: 0.9rem;
+  color: var(--light);
 }
 
 .location-chip i {
@@ -267,8 +280,8 @@ nav {
 }
 
 .remote-badge {
-  background: var(--primary-light);
-  color: white;
+  background: var(--primary-light) !important;
+  color: white !important;
   padding: 0.25rem 0.75rem;
   border-radius: 50px;
   font-size: 0.8rem;
