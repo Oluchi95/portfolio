@@ -958,9 +958,9 @@ footer {
     height: auto;
   }
 
-  .project-image {
+  /* .project-image {
     height: 150px;
-  }
+  } */
 
   .btn {
     padding: 0.5rem 1rem;
